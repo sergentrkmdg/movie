@@ -6,11 +6,13 @@ import FilmCard from "../components/FilmCard";
 const Home = () => {
   const dispatch = useDispatch();
   const {products}=useSelector(state=>state.products);
- 
+
  useEffect(()=>{
   dispatch(productAction())
   },[dispatch])
- console.log("products",products);
+
+  console.log("products",products);
+
  return (
     <div className="grid md:grid-cols-4 gap-5 grid-cols-2  " > 
       { 

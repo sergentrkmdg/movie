@@ -4,7 +4,9 @@ import { useDispatch } from 'react-redux'
 
 
 
+
 const Card = () => {
+
 const dispatch=useDispatch()
     return (
     <div className='w-1/3 h-full border fixed top-0 right-0 z-50 bg-white p-3'>

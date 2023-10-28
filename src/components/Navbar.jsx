@@ -6,7 +6,7 @@ const Navbar = () => {
     const dispatch = useDispatch()
     return (
     <div className='flex items-center justify-between px-3 h-28'>
-        <div className='text-2xl text-slate-800 font-bold tracking-wider '>TMDB</div>
+        <div className='text-2xl text-white font-bold tracking-wider '>TMDB</div>
         <div className='flex items-center space-x-4'>
             <input className='border p-3 outline-none rounded-lg ' type="text" placeholder='search' />
             <BsLightbulb size={25} className='cursor-pointer'/>
