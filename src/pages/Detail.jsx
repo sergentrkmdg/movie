@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import {useDispatch, useSelector} from "react-redux"
 import { productDetailAction } from './../redux/actions/product';
+import { productActionCard } from './../redux/actions/card';
 
 const Detail=()=> {
 
@@ -21,6 +22,11 @@ console.log("product", product)
 const Imdb=product.vote_average
 const Vote= Math.round(Imdb, 2)
 
+const addCard = () => {
+  dispatch(productActionCard(id))
+  dispatch({type:"DRAWER", payload:true})
+}
+
 return (
     <div className='mt-5 w-full h-screen flex flex-row space-x-10 '>
       <div className='relative w-1/3  '>
@@ -32,7 +38,7 @@ return (
          <div>Yayın tarihi :  {product?.release_date}</div>
          <div >IMDB: {Vote}</div>
          
-          <button className=' w-full  h-12 bg-slate-400 p-2 hover:scale-105   border rounded-lg text-lg  '>Online İzle</button>
+          <button onClick={addCard} className=' w-full  h-12 bg-slate-400 p-2 hover:scale-105   border rounded-lg text-lg  '>Online İzle</button>
           <button className='w-full h-12 bg-slate-400 hover:scale-105  border rounded-lg  text-lg  '>Sinemada izle</button>
          
      </div>

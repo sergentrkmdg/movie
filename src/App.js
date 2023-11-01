@@ -9,16 +9,18 @@ import PageContainer from './containers/PageContainer';
 function App() {
   const {drawer} = useSelector(state => state.drawer );
   return (  
-   <PageContainer>
-    <BrowserRouter>
+   
+   <BrowserRouter>
     <Navbar/> 
+      <PageContainer>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/detail/:id" element={<Detail/>} />
       </Routes>
       {drawer && <Card/>}
+       </PageContainer>
     </BrowserRouter>
-  </PageContainer>
+
  );
 }
 

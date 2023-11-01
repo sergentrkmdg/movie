@@ -14,7 +14,7 @@ const Home = () => {
   console.log("products",products);
 
  return (
-    <div className="grid md:grid-cols-4 gap-5 grid-cols-2  " > 
+    <div className="grid md:grid-cols-4 md:gap-5 gap-2 grid-cols-2  " > 
       { 
       products && products.map((film,i)=>(
       <FilmCard key={i} film={film} /> ))
