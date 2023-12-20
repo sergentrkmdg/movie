@@ -1,12 +1,13 @@
 import React from 'react'
 import {GrFormClose} from "react-icons/gr"
 import {RiDeleteBin5Fill} from "react-icons/ri"
+import { PiArmchairDuotone } from "react-icons/pi";
 import { useDispatch, useSelector } from 'react-redux'
 import { productRemoveCard } from '../redux/actions/card';
 
 
 
-const Card = () => {
+const Card = ({seats,setSeats,total,setTotal}) => {
 
   
 
@@ -15,9 +16,15 @@ const Card = () => {
     const {cardItems} = useSelector(state=>state.cardItems);
     const price = 49.99
     const deleteCard = (id) => { dispatch(productRemoveCard(id))}
-    const length = cardItems.length;
+    const leng = cardItems.length;
+    
+    const deleteToCard=()=> {
+      setSeats([]);
+      setTotal(0);
+  }
+    
 
-    console.log(length, "lenght")
+    console.log(leng, "lenght")
 
     console.log(cardItems, "cardItems")
     return (
@@ -42,8 +49,14 @@ const Card = () => {
             </div> 
             
             ))}
+           {seats.length > 0 &&   <div className='flex justify-between items-center border-b-2 p-3 space-x-3 text-black'>
+            <div className='flex '>  <PiArmchairDuotone size={25} className='mr-2' />    {seats + ","} {"("+seats.length+")"} </div>
+           <div className='flex items-center space-x-3'> <h3 className='ml-3'>  {total} TL</h3>  <RiDeleteBin5Fill className='cursor-pointer opacity-70' size={20} onClick={deleteToCard} /> </div>
+          </div>  }
+         
         </div>
-        <div className='h-12 font-semibold flex p-2 items-center rounded-sm  border-b-2 shadow-md'>Total: {(length*price).toFixed(2)} TL</div>
+        <div className='h-12 font-semibold flex p-2 items-center rounded-sm  border-b-2 shadow-md'>Total: {(leng*price)+total} TL</div>
+       
     </div>
   )
 }

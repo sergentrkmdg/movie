@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { useParams } from 'react-router-dom'
+import {useParams } from 'react-router-dom'
 import {useDispatch, useSelector} from "react-redux"
 import { productDetailAction } from './../redux/actions/product';
 import { productActionCard } from './../redux/actions/card';
@@ -16,7 +16,7 @@ const {id}=useParams();
   dispatch(productDetailAction(id) )  
 
 },[dispatch])
-
+ 
 console.log("product", product)
 
 const Imdb=product.vote_average
@@ -26,6 +26,8 @@ const addCard = () => {
   dispatch(productActionCard(id))
   dispatch({type:"DRAWER", payload:true})
 }
+
+
 
 return (
     <div className='mt-5 w-full h-screen flex flex-row space-x-10 '>
@@ -39,7 +41,7 @@ return (
          <div >IMDB: {Vote}</div>
          
           <button onClick={addCard} className=' w-full  h-12 bg-slate-400 p-2 hover:scale-105   border rounded-lg text-lg  '>Online İzle</button>
-          <button className='w-full h-12 bg-slate-400 hover:scale-105  border rounded-lg  text-lg  '>Sinemada izle</button>
+          <button onClick={()=> dispatch({type:"SALON_AC",payload:true})}className='w-full h-12 bg-slate-400 hover:scale-105  border rounded-lg  text-lg  '>Sinemada izle</button>
          
      </div>
       
