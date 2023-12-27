@@ -6,6 +6,7 @@ import {productReducer} from "./reducers/product";
 import { productDetailReducer } from "./reducers/productDetail";
 import { cardReducer } from "./reducers/card";
 import { salonReducer } from "./reducers/salon";
+import { searchReducer } from "./reducers/search";
 
 let initialState={
 
@@ -16,6 +17,7 @@ const reducers = combineReducers({
     product:productDetailReducer,
     cardItems: cardReducer,
     salon:salonReducer,
+    search:searchReducer,
     
 })
 

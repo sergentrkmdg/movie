@@ -43,7 +43,7 @@ const Card = ({seats,setSeats,total,setTotal}) => {
               <div className='text-sm md:text-base ' >  {card?.title}</div>  
             </div>  
               <div className='flex items-center space-x-3'>
-               <div>{price} </div>
+               <div>{price} TL </div>
                <RiDeleteBin5Fill className='cursor-pointer opacity-70' size={20} onClick={()=>deleteCard(card.id)} /> 
              </div>
             </div> 
@@ -51,7 +51,7 @@ const Card = ({seats,setSeats,total,setTotal}) => {
             ))}
            {seats.length > 0 &&   <div className='flex justify-between items-center border-b-2 p-3 space-x-3 text-black'>
             <div className='flex '>  <PiArmchairDuotone size={25} className='mr-2' />    {seats + ","} {"("+seats.length+")"} </div>
-           <div className='flex items-center space-x-3'> <h3 className='ml-3'>  {total} TL</h3>  <RiDeleteBin5Fill className='cursor-pointer opacity-70' size={20} onClick={deleteToCard} /> </div>
+           <div className='flex items-center space-x-3'> <h3 className='ml-3 '>  {total} TL</h3>  <RiDeleteBin5Fill className='cursor-pointer opacity-70' size={20} onClick={deleteToCard} /> </div>
           </div>  }
          
         </div>
