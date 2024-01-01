@@ -20,7 +20,7 @@ const {id}=useParams();
 console.log("product", product)
 
 const Imdb=product.vote_average
-const Vote= Math.round(Imdb, 2)
+const Vote= Math.round(Imdb*10)/10
 
 const addCard = () => {
   dispatch(productActionCard(id))
@@ -30,9 +30,9 @@ const addCard = () => {
 
 
 return (
-    <div className='mt-5 w-full h-screen flex flex-row space-x-10 '>
+    <div className='mt-5 w-full h-screen flex flex-row space-x-10  '>
       <div className='relative w-1/3  '>
-         <img className='relative w-full ' src={API_IMAGE+product.poster_path} alt="" /> 
+         <img className='relative w-full ' src={API_IMAGE+product?.poster_path} alt="" /> 
       </div>
       <div className='flex  text-neutral-200  flex-col w-2/3 space-x-5 space-y-5 items-center'>
          <div className='text-lg uppercase font-bold'>{product?.title}</div>

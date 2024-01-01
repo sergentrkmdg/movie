@@ -26,7 +26,7 @@ const Seat = ({seats,setSeats,total,setTotal}) => {
     
      <div className='md:w-2/4 w-3/4  p-5   top-10  fixed rounded-sm  z-30  h-[500px]  bg-neutral-950'>
       <div className="flex justify-end ">
-        <div><AiFillCloseCircle onClick={()=>dispatch({type:"SALON_AC", payload:false})} className="bg-white cursor-pointer " /> </div>
+        <div><AiFillCloseCircle onClick={()=>dispatch({type:"SALON_AC", payload:false})} className="text-white cursor-pointer " /> </div>
       </div>
        
        <div className="lg:w-3/4 w-full gap-5 lg:gap-10 rounded-sm m-auto ">
@@ -67,7 +67,7 @@ const Seat = ({seats,setSeats,total,setTotal}) => {
             {seats.length > 0 ?<div className=" w-3/4 m-auto mt-5 text-center rounded-md justify-center items-center  bg-neutral-600">
           <h3 className="text-md"> Koltuk no : {seats+","+ "(x"+seats.length+")" } </h3>
           <h3 className="font-semibold flex justify-center">Total : {total} TL <BiSolidCartAdd className="ml-2" size={25}  onClick={()=> dispatch({type:"DRAWER",payload:true})} /> </h3>
-          <button onClick={deleteToCard} className="w-2/5 mb-2 border border-neutral-950  bg-slate-400 rounded-md" > Temizle </button>
+          <button onClick={deleteToCard} className="w-2/5 mb-2 border border-neutral-950 font-medium bg-slate-400 rounded-md" > Temizle </button>
          </div> : null }
          
       </div>
