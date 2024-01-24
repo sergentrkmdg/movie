@@ -5,3 +5,24 @@
 #root {
     background-color:#101010
 }
+
+::-webkit-scrollbar {
+    display:block;
+    width: 10px; /* Scrollbar genişliği */
+    height: 10px; /* Scrollbar yüksekliği */
+    background-color:#ddd; /* Scrollbar arka plan rengi */
+    margin: 10px; /* Scrollbar'ın konumu */
+    padding: 5px; /* Thumb ile track arasındaki boşluk */
+    border: 1px solid #ddd; /* Kenarlık */
+    box-shadow: 0 0 5px rgba(0,0,0,0.2); /* Gölge */
+  }
+  
+  ::-webkit-scrollbar-thumb {
+  border: 1px solid #ddd; /* Scrollbar thumb kenarlığı */
+  border-radius: 5px; /* Scrollbar thumb köşe yarıçapı */
+  background-color:#181818;
+
+  &:hover {
+    background-color: #007bff; /* Scrollbar thumb hover rengi */
+  }
+}

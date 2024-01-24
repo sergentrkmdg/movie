@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter, Routes, Route} from 'react-router-dom';
 import Home from './pages/Home';
 import Detail from './pages/Detail';
 import Card from './components/Card';
@@ -9,6 +9,9 @@ import PageContainer from './containers/PageContainer';
 import Seat from './components/Seat';
 import TopRated from "./pages/TopRated";
 import NowPlaying from "./pages/NowPlaying";
+import ComingCard from "./components/ComingCard";
+import SearchCard from "./components/SearchCard";
+import Footer from "./components/Footer";
 
 function App() {
   const {drawer} = useSelector(state => state.drawer );
@@ -24,6 +27,8 @@ function App() {
       <PageContainer>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/" element={<ComingCard/>} />
+        <Route path="/search" element={<SearchCard/>} />
         <Route path="/top" element={<TopRated/>} />
         <Route path="/trend" element={<NowPlaying/>}/>
         <Route path="/detail/:id" element={<Detail/>} />

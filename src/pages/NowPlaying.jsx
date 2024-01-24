@@ -25,7 +25,7 @@ const NowPlaying = () => {
         search.length > 0 ? search.map((film,i)=>(
           <SearchCard key={i} film={film} /> ))
           :
-        now && now.map((play,i)=>(
+        now && Object.values(now).map((play,i)=>(
           <NowCard key={i} play={play} />
         ))
       }  

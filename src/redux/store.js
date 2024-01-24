@@ -9,6 +9,7 @@ import { salonReducer } from "./reducers/salon";
 import { searchReducer } from "./reducers/search";
 import { topReducer } from "./reducers/top";
 import { nowReducer } from "./reducers/now";
+import { comingReducer } from "./reducers/coming";
 
 let initialState={
 
@@ -22,6 +23,7 @@ const reducers = combineReducers({
     search:searchReducer,
     top:topReducer,
     now:nowReducer,
+    coming:comingReducer,
     
 })
 

@@ -19,6 +19,12 @@ export const nowProductAction = () => async(dispatch)=> {
     .then(nowP=>nowP.results)
     dispatch({type:"GET_NOW", payload:now})
 }
+export const comingAction = ()=> async (dispatch) => {
+    const come = await fetch ("https://api.themoviedb.org/3/movie/upcoming?api_key=b51f14a97486a38a89172607a24fe450") 
+    .then(com=>com.json())
+    .then(up=>up.results)
+    dispatch({type:"GET_COME", payload:come})
+}
 
 export const productDetailAction = (id)=> async (dispatch) => {
 

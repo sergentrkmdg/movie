@@ -14,14 +14,16 @@ const TopRated = () => {
       dispatch(topProductAction())
       dispatch(searchAction())
      },[ dispatch])
+
      console.log("top",top);
-    return (
+
+     return (
         <div className="grid md:grid-cols-4 md:gap-5 gap-2 grid-cols-2 min-h-screen  " > 
         {
          search.length > 0 ? search.map((film,i)=>(
         <SearchCard key={i} film={film} /> ))
         :
-             top &&  top.map((rated,i)=>(
+             top && Object.values(top).map((rated,i)=>(
            <TopCard key={i} rated={rated} />
         ))
         }
