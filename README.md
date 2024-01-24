@@ -1,4 +1,4 @@
-## Online film satın alma ve sinema bileti satın alma sitesi
+## Online film satın alma ve sinema bileti satın alma sitesi <br/>
 https://sinemafilm-v1.netlify.app/
 **React, redux, thunk, fetch** kullanılarak tmdb apisi çekildi ve redux ile state yönetimi yapıldı. <br/>
 Detaylar sayfasında online izleme için sepete ekle işlemleri ve sinema salonu için koltuk seçim işlemleri yapıldı.<br/> 
