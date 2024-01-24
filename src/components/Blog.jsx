@@ -17,7 +17,7 @@ const Blog = () => {
           <div className="col-span-6 md:col-span-3 border-2 bg-black  border-rose-800  ">
             
             <div className="border-b border-rose-800 p-4 flex items-center justify-between">
-              <h3>ACCUSANTIUM DOLOREMQUE LAUDANT...</h3>
+              <h3>OPPENHEIMER</h3>
               <RxAvatar size={25} className="text-white rounded-full " />
             </div>
             
@@ -39,7 +39,7 @@ const Blog = () => {
             <div className="col-span-6 text-white bg-black md:col-span-3 border-2 border-rose-800">
              
               <div className="border-b border-rose-800 p-4 flex items-center justify-between">
-                <h3>ACCUSANTIUM DOLOREMQUE LAUDANT...</h3>
+                <h3>ONE MORE SHOT</h3>
                 <RxAvatar size={25} className="text-white rounded-full " />
               </div>
               
@@ -61,7 +61,7 @@ const Blog = () => {
           <div className="col-span-6 text-white  bg-black  md:col-span-3 lg:col-span-2 border-2 border-rose-800">
            
             <div className="border-b border-rose-800 p-4 flex items-center justify-between">
-              <h3>ACCUSANTIUM DOLOREMQUE LAUDANT...</h3>
+              <h3>NAPOLEON</h3>
               <RxAvatar size={25} className="text-white rounded-full " />
             </div>
            
@@ -83,7 +83,7 @@ const Blog = () => {
             <div className="col-span-6  bg-black  text-white md:col-span-3 lg:col-span-2 border-2 border-rose-800">
              
               <div className="border-b border-rose-800 p-4 flex items-center justify-between">
-                <h3>ACCUSANTIUM DOLOREMQUE LAUDANT...</h3>
+                <h3>DEEP FEAR</h3>
                 <RxAvatar size={25} className="text-white rounded-full " />
               </div>
              
@@ -105,7 +105,7 @@ const Blog = () => {
           <div className="hidden lg:block  bg-black  text-white lg:col-span-2 border-2 border-rose-800">
          
             <div className="border-b border-rose-800 p-4 flex items-center justify-between">
-              <h3>ACCUSANTIUM DOLOREMQUE LAUDANT...</h3>
+              <h3>THE BRICKLAYER</h3>
               <RxAvatar size={25} className="text-white rounded-full " />
             </div>
            

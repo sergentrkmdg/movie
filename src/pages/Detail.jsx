@@ -41,7 +41,7 @@ return (
          <div >IMDB: {Vote}</div>
          
           <button onClick={addCard} className=' w-full  h-12 bg-slate-400 p-2 hover:scale-105   border rounded-lg text-lg  '>Online İzle</button>
-          <button onClick={()=> dispatch({type:"SALON_AC",payload:true})}className='w-full h-12 bg-slate-400 hover:scale-105  border rounded-lg  text-lg  '>Sinemada izle</button>
+          <button onClick={()=> dispatch({type:"SALON_AC",payload:true})}className='w-full h-12 bg-slate-400 hover:scale-105  border rounded-lg  text-lg overflow-hidden  '>Sinemada izle</button>
          
      </div>
       

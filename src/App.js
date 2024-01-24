@@ -36,6 +36,7 @@ function App() {
       {salon && <Seat setTotal={setTotal} total={total} seats={seats} setSeats={setSeats} /> }
       {drawer && <Card setTotal={setTotal} total={total} seats={seats} setSeats={setSeats}  />}
        </PageContainer>
+       <Footer/>
     </BrowserRouter>
 
  );

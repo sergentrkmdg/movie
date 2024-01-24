@@ -36,7 +36,7 @@ const Home = () => {
       <FilmCard key={i} film={film} /> ))
        } 
       </div>
-      <div className=' '>
+      <div className='mt-5'>
         <Blog/>
       </div>
       </div> 
