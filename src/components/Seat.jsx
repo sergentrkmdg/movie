@@ -33,7 +33,7 @@ const Seat = ({seats,setSeats,total,setTotal}) => {
         <div className="w-3/4 m-auto h-10 rounded-sm bg-slate-500">
 
         </div>
-        <div className="flex justify-evenly mt-5 m-auto ">
+        <div className="flex justify-evenly space-x-3 sm:space-x-0 mt-5 m-auto ">
        <div className=' grid grid-cols-4 text-center justify-center gap-1' >
         {Array.from({ length: 20 }, (_, i) => i + 1).map((seatIndex) => (
           <div className="h-[30px] w-[30px] flex items-center justify-center text-xs rounded-sm hover:scale-105 duration-200 "

@@ -4,7 +4,6 @@ import Home from './pages/Home';
 import Detail from './pages/Detail';
 import Card from './components/Card';
 import { useSelector } from 'react-redux';
-import Navbar from './components/Navbar';
 import PageContainer from './containers/PageContainer';
 import Seat from './components/Seat';
 import TopRated from "./pages/TopRated";
@@ -24,8 +23,7 @@ function App() {
   return (  
    
    <BrowserRouter>
-   <Menu/>  
-    <Navbar/> 
+    <Menu/>  
       <PageContainer>
       <Routes>
         <Route path="/" element={<Home />} />
