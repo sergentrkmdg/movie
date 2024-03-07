@@ -3,6 +3,7 @@ import {useParams } from 'react-router-dom'
 import {useDispatch, useSelector} from "react-redux"
 import { productDetailAction } from './../redux/actions/product';
 import { productActionCard } from './../redux/actions/card';
+import Post from '../components/Post';
 
 const Detail=()=> {
 
@@ -30,7 +31,8 @@ const addCard = () => {
 
 
 return (
-    <div className='mt-5 w-full h-screen flex flex-row space-x-10  '>
+     <div> 
+    <div className='mt-5 w-full flex flex-row space-x-10  '>
       <div className='relative w-1/3  '>
          <img className='relative w-full ' src={API_IMAGE+product?.poster_path} alt="" /> 
       </div>
@@ -43,8 +45,9 @@ return (
           <button onClick={addCard} className=' w-full  h-12 bg-slate-400 p-2 hover:scale-105   border rounded-lg text-lg  '>Online İzle</button>
           <button onClick={()=> dispatch({type:"SALON_AC",payload:true})}className='w-full h-12 bg-slate-400 hover:scale-105  border rounded-lg  text-lg overflow-hidden  '>Sinemada izle</button>
          
-     </div>
-      
+     </div>    
+    </div> 
+    <div className='mt-10 w-5/6 m-auto'>  <Post product={product}/> </div>
     </div>
   )
 }

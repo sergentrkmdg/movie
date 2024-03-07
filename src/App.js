@@ -12,6 +12,7 @@ import NowPlaying from "./pages/NowPlaying";
 import ComingCard from "./components/ComingCard";
 import SearchCard from "./components/SearchCard";
 import Footer from "./components/Footer";
+import Menu from "./components/Menu";
 
 function App() {
   const {drawer} = useSelector(state => state.drawer );
@@ -23,6 +24,7 @@ function App() {
   return (  
    
    <BrowserRouter>
+   <Menu/>  
     <Navbar/> 
       <PageContainer>
       <Routes>

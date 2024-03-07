@@ -4,8 +4,10 @@ import { comingAction } from '../redux/actions/product'
 import { useNavigate } from 'react-router-dom';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
-import "slick-carousel/slick/slick-theme.css";
 import './style.css';
+import { MdOutlineArrowForwardIos } from "react-icons/md";
+import { MdOutlineArrowBackIos } from "react-icons/md";
+
 
 
 const ComingCard = () => {
@@ -26,6 +28,9 @@ dispatch(comingAction())
   speed: 500,
   slidesToShow: 4, 
   slidesToScroll: 2,
+  arrows: true,
+  nextArrow: <MdOutlineArrowForwardIos   />,
+  prevArrow: <MdOutlineArrowBackIos  />,
 
   responsive: [
     {
@@ -60,7 +65,7 @@ dispatch(comingAction())
  return (
    
     <div> 
-  <Slider {...settings} > 
+  <Slider   {...settings} > 
         {
           coming && coming.slice(0,8).map((com,i)=> (
                 <div key={i} onClick={()=>navigate(`detail/${com?.id}`)} className= 'group relative overflow-hidden duration-200 flex flex-col items-center justify-between' >
@@ -69,7 +74,7 @@ dispatch(comingAction())
                   <h1 className='xl:leading-6 hidden group-hover:block text-white leading-3 font-medium text-center xl:text-[16px] lg:text-[14px] md:text-[12px] text-sm'>{com?.title} </h1>
                   <h2 className='hidden group-hover:block opacity-70 text-sm text-white'>{(com?.overview).substring(0,80)+"..."} </h2>
                 </div>
-           </div>
+           </div> 
             ))
         }
     </Slider>

@@ -1,9 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+ 
 #root {
-    background-color:#101010
+    background-color:#101010 
 }
 
 ::-webkit-scrollbar {
@@ -26,3 +26,4 @@
     background-color: #007bff; /* Scrollbar thumb hover rengi */
   }
 }
+
